@@ -1,0 +1,78 @@
+package pfe.gestionDeConges.backen.entities;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Compte {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", updatable = false, nullable = false)
+    private Long id;
+    private String login;
+    private String password;
+    private String privilege;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "personne")
+    private Personne personne;
+
+    public Compte() {
+    }
+
+    public Compte(String login, String password, String privilege, Personne personne) {
+        this.login = login;
+        this.password = password;
+        this.privilege = privilege;
+        this.personne = personne;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getPrivilege() {
+        return privilege;
+    }
+
+    public Personne getPersonne() {
+        return personne;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setPrivilege(String privilege) {
+        this.privilege = privilege;
+    }
+
+    public void setPersonne(Personne personne) {
+        this.personne = personne;
+    }
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+    
+    
+}
