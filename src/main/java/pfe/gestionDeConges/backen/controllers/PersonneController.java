@@ -43,5 +43,9 @@ public class PersonneController {
         public void update(@RequestBody Personne personne){
             personneRepository.save(personne);
         }
+//        @GetMapping("/get/{id}")
+//        public Personne findByCompteID(@PathVariable Long id) {
+//        	return personneRepository.findOne(id);    			
+//        }
 
     }

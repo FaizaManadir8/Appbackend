@@ -19,26 +19,76 @@ public class Compte {
     private String login;
     private String password;
     private String privilege;
+    private String cin;
+    private String nom;
+    private String prenom;
+    private String mail;
+    private String telephone;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "personne")
-    private Personne personne;
+
+//    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "compte_id")
+//    private Conge conge;
 
     public Compte() {
     }
 
-    public Compte(String login, String password, String privilege, Personne personne) {
+    public Compte(String login, String password, String privilege,String cin, String nom, String prenom, String mail, String telephone) {
         this.login = login;
         this.password = password;
         this.privilege = privilege;
-        this.personne = personne;
+        this.cin = cin;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.mail = mail;
+        this.telephone = telephone;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getLogin() {
+    public String getCin() {
+		return cin;
+	}
+
+	public void setCin(String cin) {
+		this.cin = cin;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
+	public String getLogin() {
         return login;
     }
 
@@ -50,9 +100,9 @@ public class Compte {
         return privilege;
     }
 
-    public Personne getPersonne() {
-        return personne;
-    }
+//    public Personne getPersonne() {
+//        return personne;
+//    }
 
     public void setLogin(String login) {
         this.login = login;
@@ -66,9 +116,9 @@ public class Compte {
         this.privilege = privilege;
     }
 
-    public void setPersonne(Personne personne) {
-        this.personne = personne;
-    }
+//    public void setConge(Long conge) {
+//        this.conge = conge;
+//    }
 
 	public void setId(Long id) {
 		this.id = id;

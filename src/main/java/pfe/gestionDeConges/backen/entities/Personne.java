@@ -20,19 +20,19 @@ public class Personne {
     private String mail;
     private String telephone;
 
-    @OneToOne(mappedBy="personne")
-    private Compte compte;
+//    @OneToOne(mappedBy="personne")
+//    private Compte compte;
 
     public Personne() {
     }
 
-    public Personne(String cin, String nom, String prenom, String mail, String telephone, Long compte) {
+    public Personne(String cin, String nom, String prenom, String mail, String telephone) {
         this.cin = cin;
         this.nom = nom;
         this.prenom = prenom;
         this.mail = mail;
         this.telephone = telephone;
-        this.compte.setId(compte);
+//        this.compte.setId(compte);
     }
 
     public Long getId() { return id; }
@@ -75,5 +75,9 @@ public class Personne {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+    
+    public void setID(Long id) {
+    	this.id= id;
     }
 }

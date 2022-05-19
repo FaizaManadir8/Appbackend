@@ -17,7 +17,7 @@ import pfe.gestionDeConges.backen.repositories.CongeRepository;
 
 @RestController
 @CrossOrigin(origins="*")
-@RequestMapping("conge")
+@RequestMapping("conges")
 public class CongeController {
 @Autowired
 CongeRepository congeRepository;
@@ -39,5 +39,18 @@ public void delete(@PathVariable Long id){
 @PutMapping("/update")
 public void update(@RequestBody Conge conge){
 	congeRepository.save(conge);
+}
+
+@PutMapping("/accepter")
+public void updateCongeAccepted(@RequestBody Conge conge){
+	conge.setEtat("Accepté");
+       congeRepository.save(conge);
+
+   }
+@PutMapping("/refuser")
+public void updateCongeRefuse(@RequestBody Conge conge){
+	conge.setEtat("Refusé");
+   congeRepository.save(conge);
+
 }
 }
