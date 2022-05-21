@@ -10,8 +10,8 @@ public class Agent extends Personne {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Agent(String cin, String nom, String prenom, String mail, String telephone) {
-		super(cin, nom, prenom, mail, telephone);
+	public Agent(String cin, String nom, String prenom, String mail, String telephone ,String matricule, String fonction , String service , String adresse , String grade) {
+		super(cin, nom, prenom, mail, telephone ,matricule ,fonction ,service,adresse,grade);
 		// TODO Auto-generated constructor stub
 	}
 
