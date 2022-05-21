@@ -19,6 +19,13 @@ public class Personne {
     private String prenom;
     private String mail;
     private String telephone;
+    private String matricule;
+    private String fonction;
+    private String service;
+    private String adresse;
+    private String grade;
+    
+    
 
 //    @OneToOne(mappedBy="personne")
 //    private Compte compte;
@@ -26,12 +33,18 @@ public class Personne {
     public Personne() {
     }
 
-    public Personne(String cin, String nom, String prenom, String mail, String telephone) {
+    public Personne(String cin, String nom, String prenom, String mail, String telephone, String matricule, String fonction, String service, String adresse, String grade) {
         this.cin = cin;
         this.nom = nom;
         this.prenom = prenom;
         this.mail = mail;
         this.telephone = telephone;
+        this.matricule = matricule;
+        this.fonction = fonction;
+        this.service = service;
+        this.adresse = adresse;
+        this.grade = grade;
+        
 //        this.compte.setId(compte);
     }
 
@@ -80,4 +93,44 @@ public class Personne {
     public void setID(Long id) {
     	this.id= id;
     }
+
+	public String getMatricule() {
+		return matricule;
+	}
+
+	public void setMatricule(String matricule) {
+		this.matricule = matricule;
+	}
+
+	public String getFonction() {
+		return fonction;
+	}
+
+	public void setFonction(String fonction) {
+		this.fonction = fonction;
+	}
+
+	public String getService() {
+		return service;
+	}
+
+	public void setService(String service) {
+		this.service = service;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
 }
