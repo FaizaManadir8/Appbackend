@@ -24,6 +24,13 @@ public class Compte {
     private String prenom;
     private String mail;
     private String telephone;
+    private String grade;
+    private String fonction;
+    private String disponibilite;
+    private String service;
+    private int solde = 22;
+    
+    
 
 
 //    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -33,7 +40,7 @@ public class Compte {
     public Compte() {
     }
 
-    public Compte(String login, String password, String privilege,String cin, String nom, String prenom, String mail, String telephone) {
+    public Compte(String login, String password, String privilege,String cin, String nom, String prenom, String mail, String telephone ,String grade, String fonction ,String service ,String disponibilite , int solde) {
         this.login = login;
         this.password = password;
         this.privilege = privilege;
@@ -42,6 +49,12 @@ public class Compte {
         this.prenom = prenom;
         this.mail = mail;
         this.telephone = telephone;
+        this.grade = grade ;
+        this.fonction = fonction ;
+        this.service = service ;
+        this.disponibilite = disponibilite ;
+        this.solde = solde ;
+        
     }
 
     public Long getId() {
@@ -122,6 +135,46 @@ public class Compte {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	public String getFonction() {
+		return fonction;
+	}
+
+	public void setFonction(String fonction) {
+		this.fonction = fonction;
+	}
+
+	public String getDisponibilite() {
+		return disponibilite;
+	}
+
+	public void setDisponibilite(String disponibilite) {
+		this.disponibilite = disponibilite;
+	}
+
+	public String getService() {
+		return service;
+	}
+
+	public void setService(String service) {
+		this.service = service;
+	}
+
+	public int getSolde() {
+		return solde;
+	}
+
+	public void setSolde(int solde) {
+		this.solde = solde;
 	}
     
     
