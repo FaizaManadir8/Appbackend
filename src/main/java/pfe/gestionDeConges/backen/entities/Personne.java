@@ -24,6 +24,7 @@ public class Personne {
     private String service;
     private String adresse;
     private String grade;
+    private String image;
     
     
 
@@ -33,7 +34,7 @@ public class Personne {
     public Personne() {
     }
 
-    public Personne(String cin, String nom, String prenom, String mail, String telephone, String matricule, String fonction, String service, String adresse, String grade) {
+    public Personne(String cin, String nom, String prenom, String mail, String telephone, String matricule, String fonction, String service, String adresse, String grade ,String image) {
         this.cin = cin;
         this.nom = nom;
         this.prenom = prenom;
@@ -44,6 +45,7 @@ public class Personne {
         this.service = service;
         this.adresse = adresse;
         this.grade = grade;
+        this.image = image;
         
 //        this.compte.setId(compte);
     }
@@ -132,5 +134,13 @@ public class Personne {
 
 	public void setGrade(String grade) {
 		this.grade = grade;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 }
