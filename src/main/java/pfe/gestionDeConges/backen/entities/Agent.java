@@ -11,7 +11,7 @@ public class Agent extends Personne {
 	}
 
 	public Agent(String cin, String nom, String prenom, String mail, String telephone) {
-		super(cin, nom, prenom, mail, telephone);
+//		super(cin, nom, prenom, mail, telephone);
 		// TODO Auto-generated constructor stub
 	}
 

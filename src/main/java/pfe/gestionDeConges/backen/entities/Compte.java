@@ -26,7 +26,7 @@ public class Compte {
     private String telephone;
     private String grade;
     private String fonction;
-    private String disponibilite;
+    private String disponibilite="Disponible";
     private String service;
     private int solde = 22;
     

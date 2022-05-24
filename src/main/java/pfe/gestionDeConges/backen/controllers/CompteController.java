@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import pfe.gestionDeConges.backen.entities.Compte;
+import pfe.gestionDeConges.backen.entities.Conge;
 import pfe.gestionDeConges.backen.repositories.CompteRepository;
 
 @RestController
@@ -49,5 +50,12 @@ public void update(@RequestBody Compte compte){
 public  Optional<Compte> get(@PathVariable("id") Long id) {
 	return compteRepository.findById(id);
 }
+@PutMapping("accept")
+public void updateSolde( @RequestBody Compte compte) {
+//	compte.setSolde(solde);
+	compte.setDisponibilite("Indisponible");
+	compteRepository.save(compte);
+}
+
 
 }

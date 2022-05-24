@@ -31,11 +31,11 @@ public class Conge {
 	private String interimaire;
 	private String adresseConge;
 	private String etat;
-//	private Long compte_id;
+	private int compte_id;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "compte_id", referencedColumnName = "id")
-    private Compte compte;
+//	@ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "compte_id", referencedColumnName = "id")
+//    private Compte compte;
 	
 	public Long getId() {
 		return id;
@@ -116,7 +116,7 @@ public class Conge {
 	}
 
 	public Conge(Date dateDemande, Date dateDebut, Date dateFin, int nombreDeJours, String type, String interimaire,
-			String adresseConge, String etat,Long compte) {
+			String adresseConge, String etat,int compte_id) {
 		super();
 		this.dateDemande = dateDemande;
 		this.dateDebut = dateDebut;
@@ -126,7 +126,15 @@ public class Conge {
 		this.interimaire = interimaire;
 		this.adresseConge = adresseConge;
 		this.etat = etat;
-      this.compte.setId(compte);
+		this.compte_id=compte_id;
+	}
+
+	public int getCompte_id() {
+		return compte_id;
+	}
+
+	public void setCompte_id(int compte_id) {
+		this.compte_id = compte_id;
 	}
 
 }
